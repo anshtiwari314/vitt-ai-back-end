@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const dotenv = require('dotenv')
+const sampleData = require('./sample.json')
 
 dotenv.config()
 
@@ -14,15 +15,14 @@ app.use(cors({
 
 // variables 
 let port = 5000;
-let data = {
-    "y": [3, 4, 5, 9, 10.2, 5.6, 6.66, 7, 9, 3]
-  }
+
+
   
 
 // routes 
 app.get('/data',(req,res)=>{
 
-    res.json(data)
+    res.json(sampleData)
     res.statusCode(200)
 })
 
