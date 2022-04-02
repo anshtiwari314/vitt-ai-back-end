@@ -27,4 +27,4 @@ app.get('/data',(req,res)=>{
 })
 
 
-app.listen(process.env.port || port ,()=>console.log(`server started at port ${process.env.port || port}`))
+app.listen(process.env.PORT || port ,()=>console.log(`server started at port ${process.env.PORT || port}`))
